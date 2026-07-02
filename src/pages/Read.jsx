@@ -30,8 +30,14 @@ function Read() {
             >
               <img
                 src={edition.image}
-                alt={`SPELL Magazine — ${edition.label} cover`}
-                className="edition-image image-hover-target"
+                alt={`SPELL Magazine — ${edition.label} front cover`}
+                className="edition-image edition-image-front image-hover-target"
+              />
+              <img
+                src={edition.backImage}
+                alt={`SPELL Magazine — ${edition.label} back cover`}
+                className="edition-image edition-image-back image-hover-target"
+                aria-hidden="true"
               />
             </Link>
           </div>

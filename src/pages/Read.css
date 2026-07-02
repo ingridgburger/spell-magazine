@@ -46,6 +46,7 @@
 }
 
 .edition-image-wrap {
+  position: relative;
   display: block;
   line-height: 0;
   text-decoration: none;
@@ -57,4 +58,34 @@
   height: auto;
   display: block;
   object-fit: cover;
+}
+
+.edition-image.image-hover-target {
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease,
+    opacity 0.28s ease;
+}
+
+.edition-image-front {
+  opacity: 1;
+}
+
+.edition-image-back {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.edition-image-back.image-hover-target {
+  transform: translateZ(0) rotate(-2deg) scale(0.97);
+}
+
+.edition-image-wrap:is(:hover, :focus-visible) .edition-image-front {
+  opacity: 0;
+}
+
+.edition-image-wrap:is(:hover, :focus-visible) .edition-image-back {
+  opacity: 1;
 }

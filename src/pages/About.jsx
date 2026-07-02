@@ -4,30 +4,51 @@ import lauren from '../assets/images/lauren.webp';
 import harper from '../assets/images/harper.webp';
 import drew from '../assets/images/drew.webp';
 import ingrid from '../assets/images/ingrid.webp';
+import linkedinIcon from '../assets/images/linked-in-logo-dark.png';
 import './About.css';
 
 const team = [
-  { id: 'lucy', name: 'Lucy Tyler', role: ['Editor in Chief'], photo: lucy },
-  { id: 'lauren', name: 'Lauren Foote', role: ['Managing Editor'], photo: lauren },
-  { id: 'harper', name: 'Harper Lower', role: ['Head of Writing'], photo: harper },
+  {
+    id: 'lucy',
+    name: 'Lucy Tyler',
+    role: ['Editor in Chief'],
+    photo: lucy,
+    linkedin: 'https://www.linkedin.com/in/lucinda-tyler/'
+  },
+  {
+    id: 'lauren',
+    name: 'Lauren Foote',
+    role: ['Managing Editor'],
+    photo: lauren,
+    linkedin: 'https://www.linkedin.com/in/lauren-foote-602b71226/',
+  },
+  {
+    id: 'harper',
+    name: 'Harper Lower',
+    role: ['Head of Writing'],
+    photo: harper,
+    linkedin: 'https://www.linkedin.com/in/harperlower/'
+  },
   {
     id: 'drew',
     name: 'Drew Malizia',
     role: ['Co-Creative Director', 'Editorial & Brand Designer'],
     photo: drew,
+    linkedin: 'https://www.linkedin.com/in/drew-malizia-dcm/'
   },
   {
     id: 'ingrid',
     name: 'Ingrid Burger',
     role: ['Co-Creative Director', 'Editorial & Web Designer'],
     photo: ingrid,
+    linkedin: 'https://www.linkedin.com/in/ingridburger/'
   },
 ];  
 
 function About() {
   return (
     <div className="about-page">
-      <section className="about-intro">
+      <section className="about-intro reveal-item">
         <div className="about-intro-image-wrapper">
           <img
             src={teamPhoto}
@@ -66,7 +87,7 @@ function About() {
         </div>
       </section>
 
-      <section className="about-team">
+      <section className="about-team reveal-item">
         <h2 className="text-header about-team-heading">
           Meet Our <span className="text-header-emphasized">Team</span>...
         </h2>
@@ -74,19 +95,32 @@ function About() {
         <div className="team-grid">
           {team.map((member) => (
             <div className="team-card" key={member.id}>
+            <a
+                href={member.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="team-photo-link"
+                aria-label={`${member.name} on LinkedIn`}
+            >
                 <img
                 src={member.photo}
                 alt={member.name}
                 className="team-photo"
                 />
-                <p className="team-name">{member.name}</p>
-                {member.role.map((line, index) => (
+                <img
+                src={linkedinIcon}
+                alt=""
+                className="team-linkedin-icon"
+                />
+            </a>
+            <p className="team-name">{member.name}</p>
+            {member.role.map((line, index) => (
                 <p className="team-role text-body" key={index}>
-                    {line}
+                {line}
                 </p>
-                ))}
-            </div>
             ))}
+            </div>
+          ))}
         </div>
       </section>
     </div>

@@ -77,13 +77,49 @@
   flex-direction: column;
 }
 
+.team-photo-link {
+  width: 100%;
+  margin-bottom: 16px;
+  position: relative;
+  display: block;
+}
+
+.team-linkedin-icon {
+  position: absolute;
+  top: 50%;
+  right: -20px;
+  transform: translateY(-50%) rotate(0deg) scale(0.9);
+  width: 56px;
+  height: 56px;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+}
+
+.team-photo-link:hover .team-linkedin-icon,
+.team-photo-link:focus-visible .team-linkedin-icon {
+  opacity: 1;
+  transform: translateY(-50%) rotate(-2deg) scale(1.03);
+}
+
 .team-photo {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   display: block;
-  margin-bottom: 16px;
+  margin-bottom: 0;
   border: 1px solid var(--color-dark);
+  transition: transform 0.2s ease, filter 0.2s ease;
+  transform-origin: center;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.team-photo-link:is(:hover, :focus-visible) .team-photo {
+  transform: translateZ(0) rotate(-2deg) scale(1.03);
+  filter: drop-shadow(0 10px 18px rgba(26, 26, 26, 0.35));
 }
 
 .team-name {
