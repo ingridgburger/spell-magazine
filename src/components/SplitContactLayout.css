@@ -1,0 +1,128 @@
+.split-contact-layout {
+  display: flex;
+  height: 100vh;
+}
+
+.split-contact-layout-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 40px;
+  --reveal-bg: var(--color-background);
+  background-color: transparent;
+}
+
+.split-contact-layout-image {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 0;
+}
+
+.split-contact-layout-title {
+  text-align: center;
+  margin: 0;
+}
+
+.split-contact-layout-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 700px;
+}
+
+.split-contact-layout-body {
+  margin: 0;
+  text-align: left;
+}
+
+.split-contact-layout-contact {
+  flex: 0 0 30vw;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+  padding: 60px 60px;
+  --reveal-bg: var(--color-red);
+  background-color: transparent;
+  border-left: 1px solid var(--color-dark);
+}
+
+.split-contact-layout-contact-title {
+  color: var(--color-light);
+  margin: 0;
+}
+
+.split-contact-layout-contact-subtitle {
+  color: var(--color-light);
+  margin: 8px 0 0;
+  max-width: 400px;
+}
+
+.connect-form {
+  margin-top: 16px;
+}
+
+@media (max-width: 1100px) {
+  .split-contact-layout-contact {
+    padding: 40px 36px;
+  }
+}
+
+@media (max-width: 875px) {
+  .split-contact-layout-contact {
+    padding: 40px 24px;
+  }
+}
+
+@media (max-width: 650px) {
+  .split-contact-layout {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .split-contact-layout-main {
+    width: 100%;
+    padding: 48px var(--mobile-side-padding);
+    gap: 20px;
+  }
+
+  .split-contact-layout-image-link {
+    width: 100%;
+  }
+
+  .split-contact-layout-image {
+    width: 100%;
+    max-width: 100%;
+    max-height: none;
+    height: auto;
+  }
+
+  .split-contact-layout-contact {
+    flex: none;
+    width: 100%;
+    padding: 48px var(--mobile-side-padding);
+    gap: 0;
+    border-left: none;
+    border-top: 1px solid var(--color-dark);
+  }
+
+  .connect-form {
+    margin-top: 16px;
+  }
+
+  .split-contact-layout-main .btn,
+  .connect-form .btn-primary {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .split-contact-layout-copy {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,60 @@
+.read-page {
+  padding: 64px 80px 80px;
+}
+
+.read-intro {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.read-intro .text-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  gap: 0.25em;
+  margin: 0 0 16px;
+}
+
+.read-subtitle {
+  margin: 0;
+}
+
+.edition-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.edition-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.edition-label-row {
+  border-bottom: 1px solid var(--color-dark);
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+}
+
+.edition-label {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--color-dark);
+}
+
+.edition-image-wrap {
+  display: block;
+  line-height: 0;
+  text-decoration: none;
+  overflow: visible;
+}
+
+.edition-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}

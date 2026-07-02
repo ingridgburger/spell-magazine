@@ -1,0 +1,135 @@
+.read-edition-page {
+  padding: 64px 80px 80px;
+}
+
+.read-edition-top-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  justify-content: space-between;
+  position: relative;
+}
+
+.read-edition-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-dark);
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-weight: 700;
+  flex-shrink: 0;
+  transition:
+    filter 0.2s ease,
+    transform 0.2s ease;
+}
+
+.read-edition-back-link:hover,
+.read-edition-back-link:focus-visible {
+  filter: drop-shadow(0 4px 8px rgba(26, 26, 26, 0.35));
+  transform: translateX(-1px);
+}
+
+.read-edition-back-arrow {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.read-edition-title {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.read-edition-top-row.reveal-item > .read-edition-title {
+  --reveal-base-transform: translateX(-50%);
+}
+
+.read-edition-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.read-edition-disclaimer {
+  margin: 20px 0 0;
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 18px;
+  font-style: italic;
+  text-align: center;
+}
+
+.read-edition-embed-wrap {
+  margin-top: 20px;
+  border: 1px solid #e7e7e7;
+  background: #f6f6f6;
+  padding: 12px;
+}
+
+.read-edition-iframe {
+  width: 100%;
+  height: 620px;
+  border: 0;
+  background: #fff;
+}
+
+.read-edition-print-block {
+  max-width: 820px;
+  margin: 56px auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: left;
+}
+
+.read-edition-print-title {
+  margin: 0;
+}
+
+.read-edition-print-body {
+  margin: 0;
+  max-width: 760px;
+}
+
+@media (max-width: 900px) {
+  .read-edition-page {
+    padding: 48px var(--mobile-side-padding);
+  }
+
+  .read-edition-top-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    position: static;
+  }
+
+  .read-edition-title {
+    width: 100%;
+    position: static;
+    transform: none;
+    white-space: normal;
+  }
+
+  .read-edition-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .read-edition-actions .btn,
+  .read-edition-print-block .btn {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .read-edition-iframe {
+    height: 500px;
+  }
+}

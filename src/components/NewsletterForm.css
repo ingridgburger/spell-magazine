@@ -1,0 +1,81 @@
+.connect-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.connect-input {
+  height: 56px;
+  padding: 0 20px;
+  background-color: var(--color-light);
+  border: 1px solid var(--color-dark);
+  color: var(--color-dark);
+  font-family: var(--font-body);
+  font-size: 16px;
+  transition:
+    transform 0.15s ease,
+    filter 0.15s ease,
+    border-color 0.15s ease,
+    background-color 0.15s ease,
+    color 0.15s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.connect-input:hover {
+  transform: translateZ(0) scale(0.98);
+  filter: drop-shadow(0 6px 10px rgba(26, 26, 26, 0.22));
+}
+
+.connect-input:focus,
+.connect-input:focus-visible {
+  transform: translateZ(0) scale(1);
+  filter: drop-shadow(0 6px 10px rgba(26, 26, 26, 0.22));
+}
+
+.connect-input::placeholder {
+  color: rgba(26, 26, 26, 0.6);
+}
+
+.connect-input:focus {
+  outline: none;
+  border-color: var(--color-dark);
+}
+
+.connect-form .btn-primary {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.connect-form .btn-primary:hover,
+.connect-form .btn-primary:focus-visible {
+  border-color: var(--color-light);
+  color: var(--color-light);
+  filter: drop-shadow(0 8px 14px rgba(255, 253, 248, 0.5));
+}
+
+.connect-form .btn-primary:active {
+  transform: translateZ(0) scale(0.98);
+}
+
+.connect-form .btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.connect-status {
+  font-family: var(--font-body);
+  font-size: 16px;
+  margin: 0;
+}
+
+.connect-status-success {
+  color: var(--color-dark);
+  font-weight: 800;
+}
+
+.connect-status-error {
+  color: var(--color-red);
+}
