@@ -160,7 +160,9 @@
   }
 
   .hero-section {
-    height: calc(100vh - 123px);
+    height: calc(100vh - var(--home-mobile-chrome-height, 123px));
+    height: calc(100svh - var(--home-mobile-chrome-height, 123px));
+    height: calc(100dvh - var(--home-mobile-chrome-height, 123px));
     min-height: unset;
     padding: 48px var(--mobile-side-padding);
   }

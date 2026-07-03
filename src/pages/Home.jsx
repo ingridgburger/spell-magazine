@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import heroImage from "../assets/images/home-preview.webp";
 import teamPhoto from "../assets/images/team-fisheye.png";
@@ -6,6 +7,38 @@ import SplitContactLayout from "../components/SplitContactLayout";
 import "./Home.css";
 
 function Home() {
+  useEffect(() => {
+    const updateMobileHeroHeight = () => {
+      if (window.innerWidth > 650) {
+        document.documentElement.style.removeProperty("--home-mobile-chrome-height");
+        return;
+      }
+
+      const header = document.querySelector(".site-header");
+      const banner = document.querySelector(".announcement-banner");
+      const headerHeight = header ? header.getBoundingClientRect().height : 0;
+      const bannerHeight = banner ? banner.getBoundingClientRect().height : 0;
+      const totalOffset = Math.round(headerHeight + bannerHeight);
+
+      document.documentElement.style.setProperty(
+        "--home-mobile-chrome-height",
+        `${totalOffset}px`,
+      );
+    };
+
+    updateMobileHeroHeight();
+
+    window.addEventListener("resize", updateMobileHeroHeight);
+    window.addEventListener("orientationchange", updateMobileHeroHeight);
+    window.visualViewport?.addEventListener("resize", updateMobileHeroHeight);
+
+    return () => {
+      window.removeEventListener("resize", updateMobileHeroHeight);
+      window.removeEventListener("orientationchange", updateMobileHeroHeight);
+      window.visualViewport?.removeEventListener("resize", updateMobileHeroHeight);
+    };
+  }, []);
+
   return (
     <div>
       <div className="announcement-banner">
