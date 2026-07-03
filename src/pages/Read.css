@@ -89,3 +89,39 @@
 .edition-image-wrap:is(:hover, :focus-visible) .edition-image-back {
   opacity: 1;
 }
+
+@media (max-width: 830px) {
+  .read-page {
+    padding: 48px 40px 60px;
+  }
+
+  .edition-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+
+@media (max-width: 415px) {
+  .read-page {
+    padding: 40px var(--mobile-side-padding) 60px;
+  }
+
+  .edition-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .read-title-long {
+    display: none;
+  }
+
+  .read-title-short {
+    display: inline;
+  }
+}
+
+@media (min-width: 415px) {
+  .read-title-short {
+    display: none;
+  }
+}

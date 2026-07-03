@@ -44,8 +44,10 @@
   border-color: var(--color-dark);
 }
 
-.connect-form .btn-primary {
+.connect-form .btn.btn-primary {
   width: 100%;
+  max-width: 100%;
+  align-self: center;
   margin-top: 8px;
 }
 

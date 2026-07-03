@@ -113,12 +113,14 @@ function About() {
                 className="team-linkedin-icon"
                 />
             </a>
-            <p className="team-name">{member.name}</p>
-            {member.role.map((line, index) => (
-                <p className="team-role text-body" key={index}>
-                {line}
-                </p>
-            ))}
+                <div className="team-text">
+                    <p className="team-name">{member.name}</p>
+                    {member.role.map((line, index) => (
+                        <p className="team-role text-body" key={index}>
+                        {line}
+                        </p>
+                ))}
+                </div>
             </div>
           ))}
         </div>

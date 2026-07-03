@@ -138,3 +138,124 @@
 .team-role + .team-role {
   margin-top: 2px;
 }
+
+@media (max-width: 1000px) {
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+    .about-page {
+    padding-top: 48px;
+  }
+
+    .about-intro {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .about-intro-image {
+    width: 30vw;
+    height: 30vw;
+    max-width: 30vw;
+    max-height: 30vw;
+  }
+
+  .about-intro-content {
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .about-intro-heading {
+    align-self: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 880px) {
+      .about-intro-image {
+        width: 40vw;
+        height: 40vw;
+        max-width: 40vw;
+        max-height: 40vw;
+      }
+}
+
+@media (max-width: 650px) {
+  .about-page {
+    padding: 48px var(--mobile-side-padding);
+  }
+
+  /* Intro section */
+
+  .about-intro {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 64px;
+  }
+
+  .about-intro-image {
+    width: 60vw;
+    height: 60vw;
+    max-width: 60vw;
+    max-height: 60vw;
+  }
+
+  .about-intro-content {
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .about-intro-heading {
+    align-self: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .about-intro-content .text-body {
+    text-align: left;
+  }
+
+  /* Team section */
+
+  .about-team-heading {
+    margin-bottom: 32px;
+  }
+
+  .team-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .team-card {
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .team-photo-link {
+    width: 96px;
+    flex-shrink: 0;
+    margin-bottom: 0;
+  }
+
+  .team-linkedin-icon {
+    width: 32px;
+    height: 32px;
+    right: -10px;
+  }
+
+  .team-name {
+    margin: 0 0 2px;
+    font-size: 14px;
+  }
+
+    .team-text {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
