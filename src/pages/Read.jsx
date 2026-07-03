@@ -8,8 +8,11 @@ function Read() {
       <div className="read-intro reveal-item">
         <h1 className="text-header">
           Read{" "}
-          <span className="text-header-emphasized read-title-long">Spell Magazine</span>
-          <span className="text-header-emphasized read-title-short">Spell</span>.
+          <span className="text-header-emphasized read-title-long">
+            Spell Magazine
+          </span>
+          <span className="text-header-emphasized read-title-short">Spell</span>
+          .
         </h1>
         <p className="text-body read-subtitle">
           Explore all editions of our magazine.

@@ -328,6 +328,13 @@ body {
 }
 
 @media (max-width: 650px) {
+  .btn {
+    width: 250px !important;
+    max-width: 250px !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .text-header,
   .text-header-emphasized {
     font-size: 30px;

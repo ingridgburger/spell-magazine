@@ -55,13 +55,8 @@ function ReadEdition() {
           allowFullScreen
           allow="clipboard-write"
           scrolling="no"
-          className="fp-iframe"
+          className="fp-iframe read-edition-iframe"
           title={`${edition.label} flipbook`}
-          style={{
-            border: "1px solid lightgray",
-            width: "100%",
-            height: "90vh",
-          }}
           loading="lazy"
         />
       </div>

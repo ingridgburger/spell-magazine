@@ -17,7 +17,8 @@ export const editions = [
     openInNewTabUrl: "https://heyzine.com/flip-book/8e21b54687.html",
     embedUrl: "https://heyzine.com/flip-book/8e21b54687.html",
     printAvailable: false,
-    disclaimer: "We hosted a hands-on zine-making station during the Writers Room Open House, inviting incoming Drexel students to dive into the world of art, publishing, and DIY creativity through collage, writing, and self-expression. Explore pages from our zine workshop below!"
+    disclaimer:
+      "We hosted a hands-on zine-making station during the Writers Room Open House, inviting incoming Drexel students to dive into the world of art, publishing, and DIY creativity through collage, writing, and self-expression. Explore pages from our zine workshop below!",
   },
   {
     id: "fall-winter-2026",
