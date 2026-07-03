@@ -213,4 +213,10 @@
   .about-preview-body {
     max-width: 100%;
   }
+
+  .hero-image-link:hover .hero-image {
+    animation-play-state: running;
+    transform: none;
+    filter: none;
+  }
 }

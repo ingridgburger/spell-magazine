@@ -139,6 +139,18 @@
   margin-top: 2px;
 }
 
+@media (max-width: 650px) {
+  .team-photo-link:hover .team-linkedin-icon {
+    opacity: 0;
+    transform: translateY(-50%) rotate(0deg) scale(0.9);
+  }
+
+  .team-photo-link:hover .team-photo {
+    transform: translateZ(0);
+    filter: none;
+  }
+}
+
 @media (max-width: 1000px) {
   .team-grid {
     grid-template-columns: repeat(3, 1fr);

@@ -341,4 +341,42 @@ body {
   .text-subheader + .text-header {
     margin-top: 0px;
   }
+
+  .btn:hover {
+    -webkit-transform: translateZ(0) scale(1);
+    transform: translateZ(0) scale(1);
+  }
+
+  .btn-primary:hover {
+    background-color: var(--color-dark);
+    border-color: var(--color-dark);
+    color: var(--color-light);
+    filter: none;
+  }
+
+  .btn-secondary:hover {
+    background-color: var(--color-light);
+    border-color: var(--color-dark);
+    color: var(--color-dark);
+    filter: none;
+  }
+
+  .btn-dark:hover {
+    background-color: var(--color-dark);
+    border-color: var(--color-light);
+    color: var(--color-light);
+    filter: none;
+  }
+
+  .image-hover-target:hover,
+  .image-hover-link:hover img {
+    transform: translateZ(0);
+  }
+
+  .image-hover-shadow-dark:hover .image-hover-target,
+  .image-hover-shadow-dark:hover img,
+  .image-hover-shadow-light:hover .image-hover-target,
+  .image-hover-shadow-light:hover img {
+    filter: none;
+  }
 }

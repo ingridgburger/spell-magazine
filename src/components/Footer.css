@@ -48,3 +48,14 @@
   width: 32px;
   object-fit: contain;
 }
+
+@media (max-width: 650px) {
+  .footer-email:hover {
+    color: var(--color-light);
+    filter: none;
+  }
+
+  .footer-icon-link:hover {
+    filter: none;
+  }
+}

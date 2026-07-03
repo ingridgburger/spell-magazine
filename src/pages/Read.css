@@ -125,3 +125,13 @@
     display: none;
   }
 }
+
+@media (max-width: 650px) {
+  .edition-image-wrap:hover .edition-image-front {
+    opacity: 1;
+  }
+
+  .edition-image-wrap:hover .edition-image-back {
+    opacity: 0;
+  }
+}

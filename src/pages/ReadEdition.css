@@ -133,3 +133,10 @@
     height: 500px;
   }
 }
+
+@media (max-width: 650px) {
+  .read-edition-back-link:hover {
+    filter: none;
+    transform: none;
+  }
+}

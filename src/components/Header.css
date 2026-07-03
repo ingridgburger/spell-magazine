@@ -201,4 +201,12 @@
     width: 80vw;
     background-color: var(--color-light);
   }
+
+  .logo-row a:hover .logo {
+    filter: none;
+  }
+
+  .mobile-nav-link:hover {
+    filter: none;
+  }
 }

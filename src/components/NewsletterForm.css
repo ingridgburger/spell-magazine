@@ -81,3 +81,17 @@
 .connect-status-error {
   color: var(--color-red);
 }
+
+@media (max-width: 650px) {
+  .connect-input:hover {
+    transform: translateZ(0) scale(1);
+    filter: none;
+  }
+
+  .connect-form .btn-primary:hover {
+    background-color: var(--color-dark);
+    border-color: var(--color-dark);
+    color: var(--color-light);
+    filter: none;
+  }
+}
