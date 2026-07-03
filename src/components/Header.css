@@ -147,12 +147,16 @@
     align-items: center;
     justify-content: center;
     position: fixed;
-    top: 82px;
-    left: 0;
+    inset: 0;
     width: 100vw;
-    height: calc(100vh - 85px);
+    height: 100vh;
+    height: 100svh;
+    height: 100dvh;
     overflow: hidden;
     background-color: rgba(26, 26, 26, 0.9);
+    padding: 96px var(--mobile-side-padding) 24px;
+    box-sizing: border-box;
+    text-align: center;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -179,6 +183,8 @@
     text-align: center;
     padding: 20px 0;
     width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
     transition:
       filter 0.15s ease,
       transform 0.15s ease;
@@ -199,6 +205,8 @@
   .mobile-nav-divider {
     height: 1px;
     width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
     background-color: var(--color-light);
   }
 
