@@ -125,6 +125,8 @@
   }
 
   .logo-row {
+    position: relative;
+    z-index: 35;
     justify-content: flex-start;
     padding: 8px var(--mobile-side-padding);
   }
@@ -139,6 +141,7 @@
 
   .hamburger {
     display: flex;
+    z-index: 40;
   }
 
   .mobile-nav {
@@ -147,14 +150,16 @@
     align-items: center;
     justify-content: center;
     position: fixed;
-    inset: 0;
+    top: 82px;
+    left: 0;
+    right: 0;
     width: 100vw;
     height: 100vh;
     height: 100svh;
     height: 100dvh;
     overflow: hidden;
     background-color: rgba(26, 26, 26, 0.9);
-    padding: 96px var(--mobile-side-padding) 24px;
+    padding: 24px var(--mobile-side-padding);
     box-sizing: border-box;
     text-align: center;
     opacity: 0;
@@ -164,7 +169,7 @@
       opacity 0.2s ease,
       transform 0.2s ease,
       visibility 0.2s;
-    z-index: 25;
+    z-index: 20;
   }
 
   .mobile-nav-open {
