@@ -10,7 +10,9 @@ function Home() {
   useEffect(() => {
     const updateMobileHeroHeight = () => {
       if (window.innerWidth > 650) {
-        document.documentElement.style.removeProperty("--home-mobile-chrome-height");
+        document.documentElement.style.removeProperty(
+          "--home-mobile-chrome-height",
+        );
         return;
       }
 
@@ -35,7 +37,10 @@ function Home() {
     return () => {
       window.removeEventListener("resize", updateMobileHeroHeight);
       window.removeEventListener("orientationchange", updateMobileHeroHeight);
-      window.visualViewport?.removeEventListener("resize", updateMobileHeroHeight);
+      window.visualViewport?.removeEventListener(
+        "resize",
+        updateMobileHeroHeight,
+      );
     };
   }, []);
 
