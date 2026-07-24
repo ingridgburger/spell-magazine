@@ -8,38 +8,45 @@ import "./Home.css";
 
 function Home() {
   useEffect(() => {
-    const updateMobileHeroHeight = () => {
-      if (window.innerWidth > 650) {
-        document.documentElement.style.removeProperty(
-          "--home-mobile-chrome-height",
-        );
-        return;
-      }
-
+    const updateHeroViewportHeight = () => {
       const header = document.querySelector(".site-header");
       const banner = document.querySelector(".announcement-banner");
       const headerHeight = header ? header.getBoundingClientRect().height : 0;
       const bannerHeight = banner ? banner.getBoundingClientRect().height : 0;
       const totalOffset = Math.round(headerHeight + bannerHeight);
 
+      if (window.innerWidth > 650) {
+        document.documentElement.style.removeProperty(
+          "--home-mobile-chrome-height",
+        );
+        document.documentElement.style.setProperty(
+          "--home-desktop-chrome-height",
+          `${totalOffset}px`,
+        );
+        return;
+      }
+
       document.documentElement.style.setProperty(
         "--home-mobile-chrome-height",
         `${totalOffset}px`,
       );
+      document.documentElement.style.removeProperty(
+        "--home-desktop-chrome-height",
+      );
     };
 
-    updateMobileHeroHeight();
+    updateHeroViewportHeight();
 
-    window.addEventListener("resize", updateMobileHeroHeight);
-    window.addEventListener("orientationchange", updateMobileHeroHeight);
-    window.visualViewport?.addEventListener("resize", updateMobileHeroHeight);
+    window.addEventListener("resize", updateHeroViewportHeight);
+    window.addEventListener("orientationchange", updateHeroViewportHeight);
+    window.visualViewport?.addEventListener("resize", updateHeroViewportHeight);
 
     return () => {
-      window.removeEventListener("resize", updateMobileHeroHeight);
-      window.removeEventListener("orientationchange", updateMobileHeroHeight);
+      window.removeEventListener("resize", updateHeroViewportHeight);
+      window.removeEventListener("orientationchange", updateHeroViewportHeight);
       window.visualViewport?.removeEventListener(
         "resize",
-        updateMobileHeroHeight,
+        updateHeroViewportHeight,
       );
     };
   }, []);
