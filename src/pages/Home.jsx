@@ -1,10 +1,18 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import heroImage from "../assets/images/home-preview.webp";
+import heroImage from "../assets/images/e4-cover.webp";
 import teamPhoto from "../assets/images/team-fisheye.png";
 import printImage from "../assets/images/to-print.webp";
 import SplitContactLayout from "../components/SplitContactLayout";
 import "./Home.css";
+
+const mockupImages = import.meta.glob("../assets/images/mockup-*.webp", {
+  eager: true,
+  import: "default",
+});
+const magazineSpreads = Array.from({ length: 10 }, (_, index) =>
+  mockupImages[`../assets/images/mockup-${index + 1}.webp`],
+);
 
 function Home() {
   useEffect(() => {
@@ -57,45 +65,76 @@ function Home() {
         <div className="announcement-track">
           <span className="announcement-text">Welcome to SPELL Magazine</span>
           <span className="announcement-text">
-            Check Out Our Latest Edition
+            Spring/Summer 2026 Out Now
           </span>
           <span className="announcement-text">Welcome to SPELL Magazine</span>
           <span className="announcement-text">
-            Check Out Our Latest Edition
+            Spring/Summer 2026 Out Now
           </span>
           <span className="announcement-text">Welcome to SPELL Magazine</span>
           <span className="announcement-text">
-            Check Out Our Latest Edition
+            Spring/Summer 2026 Out Now
           </span>
         </div>
       </div>
 
-      <section className="hero-section reveal-item">
-        <Link to="/read" className="hero-image-link">
-          <div className="hero-image-pulse">
+      <section className="hero-section" aria-labelledby="home-edition-title">
+        <div className="hero-edition-content">
+          <Link to="/read/spring-summer-2026" className="hero-image-link">
             <img
               src={heroImage}
-              alt="SPELL Magazine Edition 3 preview"
+              alt="SPELL Magazine Edition 4 cover"
               className="hero-image"
+              fetchPriority="high"
             />
-          </div>
-        </Link>
-        <p className="text-subheader hero-edition">Edition 3</p>
-        <h1 className="text-header hero-title">Fall Winter 2026</h1>
-
-        <div className="hero-buttons">
-          <Link to="/read-digitally" className="btn btn-primary">
-            Read Digitally
           </Link>
+          <h1 id="home-edition-title" className="text-header hero-title">
+            Spring Summer 2026
+          </h1>
 
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSdJQBFUEoO9F1VgkQj24ipuMDvtfLZgmlGmielzsEMi2PALRA/viewform?usp=send_form"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-secondary"
-          >
-            Order Print
-          </a>
+          <div className="hero-buttons">
+            <Link to="/read/spring-summer-2026" className="btn btn-primary">
+              Read Digitally
+            </Link>
+
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSf7ZiluwR_d7dZFz19SUkkUs9QzY908b4KulViDGGIuNFwx9A/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-secondary"
+            >
+              Order Print
+            </a>
+          </div>
+        </div>
+
+        <div
+          className="hero-spreads"
+          role="region"
+          aria-label="Inside SPELL Magazine Edition 4"
+        >
+          <div className="hero-spreads-viewport">
+            <div className="hero-spreads-track">
+              {[0, 1].map((copy) => (
+                <div
+                  className="hero-spreads-group"
+                  key={copy}
+                  aria-hidden={copy === 1 ? true : undefined}
+                >
+                  {magazineSpreads.map((image, index) => (
+                    <img
+                      key={image}
+                      src={image}
+                      alt={copy === 0 ? `Edition 4 magazine spread ${index + 1}` : ""}
+                      width="1000"
+                      height="650"
+                      className="hero-spread-image"
+                    />
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 

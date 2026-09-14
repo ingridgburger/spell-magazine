@@ -6,8 +6,21 @@ import backSpring2025 from "../assets/images/back-spring-2025.webp";
 import backWinter2025 from "../assets/images/back-winter-2025.webp";
 import zineWorkshop from "../assets/images/zine-workshop.webp";
 import backZineWorkshop from "../assets/images/back-zine-workshop.webp";
+import springSummer2026 from "../assets/images/spell-spring-summer-2026.webp";
+import backSpringSummer2026 from "../assets/images/back-spell-spring-summer-2026.webp";
 
 export const editions = [
+  {
+    id: "spring-summer-2026",
+    label: "Spring Summer 2026",
+    title: "SPRING SUMMER 2026 EDITION",
+    image: springSummer2026,
+    backImage: backSpringSummer2026,
+    openInNewTabUrl: "https://heyzine.com/flip-book/802c82db8d.html",
+    embedUrl: "https://heyzine.com/flip-book/802c82db8d.html",
+    printOrderUrl: "https://docs.google.com/forms/d/e/1FAIpQLSf7ZiluwR_d7dZFz19SUkkUs9QzY908b4KulViDGGIuNFwx9A/viewform",
+    printAvailable: true,
+  },
   {
     id: "zine-workshop",
     label: "WR x SPELL Zine Workshop",

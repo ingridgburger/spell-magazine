@@ -39,60 +39,114 @@
 /* Hero section */
 
 .hero-section {
+  display: grid;
+  grid-template-columns: minmax(0, 540px) minmax(0, 450px);
+  grid-template-rows: minmax(0, 1fr);
+  justify-content: center;
+  gap: 56px;
+  height: calc(100vh - var(--home-desktop-chrome-height, 218px));
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.hero-edition-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: calc(100dvh - var(--home-desktop-chrome-height, 0px));
-  padding: 16px 24px 24px;
+  min-width: 0;
+  min-height: 0;
+  padding: 20px 0 24px;
   gap: 10px;
 }
 
 .hero-image-link {
-  display: inline-block;
+  display: block;
+  width: 100%;
+  flex: 1 1 0;
+  min-height: 0;
   margin-bottom: 4px;
 }
 
 .hero-image {
-  max-width: min(72vw, 520px);
-  max-height: 46vh;
-  width: auto;
-  height: auto;
+  display: block;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
-  margin-bottom: 0;
-  animation: pulse-scale 3s ease-in-out infinite;
   transition: filter 0.2s ease;
 }
 
 .hero-image-link:hover .hero-image {
-  animation-play-state: paused;
-  transform: scale(1.03);
   filter: drop-shadow(0 12px 24px rgba(26, 26, 26, 0.45));
-}
-
-@keyframes pulse-scale {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.03);
-  }
 }
 
 .hero-edition {
   margin: 0;
 }
 
+.hero-edition-content > :not(.hero-image-link) {
+  flex-shrink: 0;
+}
+
 .hero-title {
-  margin: 0 0 18px;
+  margin: 0 0 4px;
+  font-size: 36px;
+  text-wrap: balance;
 }
 
 .hero-buttons {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: 100%;
   gap: 16px;
   margin-top: 2px;
+}
+
+.hero-buttons .btn {
+  width: 100%;
+}
+
+.hero-spreads {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+}
+
+.hero-spreads-viewport {
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero-spreads-track {
+  animation: scroll-spreads 100s linear infinite;
+  will-change: transform;
+}
+
+.hero-spreads-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 18px 40px;
+}
+
+.hero-spread-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 20 / 13;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 10px rgba(26, 26, 26, 0.25));
+}
+
+@keyframes scroll-spreads {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
 }
 
 /* About preview section */
@@ -162,33 +216,35 @@
   }
 
   .hero-section {
-    height: calc(100vh - var(--home-mobile-chrome-height, 123px));
-    height: calc(100svh - var(--home-mobile-chrome-height, 123px));
-    height: calc(100dvh - var(--home-mobile-chrome-height, 123px));
-    min-height: unset;
-    padding: 48px var(--mobile-side-padding);
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr);
+    height: calc(100vh - var(--home-mobile-chrome-height, 115px));
+    height: calc(100dvh - var(--home-mobile-chrome-height, 115px));
+    gap: 0;
+    padding: 0 var(--mobile-side-padding);
   }
 
-  .hero-image-link {
-    width: 100%;
-    max-width: 100%;
+  .hero-edition-content {
+    padding: 16px 0 20px;
+    gap: 8px;
   }
 
-  .hero-image {
-    width: 100%;
-    max-width: 100%;
-    max-height: none;
-    height: auto;
+  .hero-title {
+    font-size: 30px;
+    margin-bottom: 4px;
   }
 
   .hero-buttons {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: minmax(0, 1fr);
     gap: 12px;
   }
 
   .hero-buttons .btn {
-    max-width: 360px;
+    font-size: 14px;
+  }
+
+  .hero-spreads {
+    display: none;
   }
 
   .about-preview {
@@ -219,8 +275,22 @@
   }
 
   .hero-image-link:hover .hero-image {
-    animation-play-state: running;
-    transform: none;
     filter: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-spreads-track,
+  .announcement-track {
+    animation: none;
+    will-change: auto;
+  }
+
+  .hero-spreads-viewport {
+    overflow-y: auto;
+  }
+
+  .hero-spreads-group[aria-hidden="true"] {
+    display: none;
   }
 }

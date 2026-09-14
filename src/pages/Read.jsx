@@ -21,10 +21,7 @@ function Read() {
 
       <div className="edition-grid">
         {editions.map((edition) => (
-          <div
-            className="edition-card reveal-item reveal-fixed-left"
-            key={edition.id}
-          >
+          <div className="edition-card" key={edition.id}>
             <div className="edition-label-row">
               <span className="edition-label">{edition.label}</span>
             </div>
