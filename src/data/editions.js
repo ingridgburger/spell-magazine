@@ -13,6 +13,7 @@ export const editions = [
   {
     id: "spring-summer-2026",
     label: "Spring Summer 2026",
+    printLabel: "Spring/Summer 2026",
     title: "SPRING SUMMER 2026 EDITION",
     image: springSummer2026,
     backImage: backSpringSummer2026,
@@ -36,6 +37,7 @@ export const editions = [
   {
     id: "fall-winter-2026",
     label: "Fall Winter 2026",
+    printLabel: "Fall/Winter 2026",
     title: "FALL WINTER 2026 EDITION",
     image: fallWinter2026,
     backImage: backFallWinter2026,

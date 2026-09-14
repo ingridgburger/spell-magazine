@@ -69,8 +69,8 @@ function ReadEdition() {
           </h2>
           <p className="text-body read-edition-print-body">
             We are so excited to be moving into the world of print! You are now
-            eligible to order a physical copy of our Fall/Winter 2026 edition.
-            If you are interested, please see the form below:
+            eligible to order a physical copy of our {edition.printLabel ?? edition.label}{" "}
+            edition. If you are interested, please see the form below:
           </p>
           <a
             href={edition.printOrderUrl}
@@ -78,7 +78,7 @@ function ReadEdition() {
             rel="noopener noreferrer"
             className="btn btn-primary"
           >
-            ORDER NOW
+            ORDER PRINT
           </a>
         </section>
       ) : null}
