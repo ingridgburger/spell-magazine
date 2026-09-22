@@ -9,27 +9,6 @@ import "./About.css";
 
 const team = [
   {
-    id: "lucy",
-    name: "Lucy Tyler",
-    role: ["Editor in Chief"],
-    photo: lucy,
-    linkedin: "https://www.linkedin.com/in/lucinda-tyler/",
-  },
-  {
-    id: "lauren",
-    name: "Lauren Foote",
-    role: ["Managing Editor"],
-    photo: lauren,
-    linkedin: "https://www.linkedin.com/in/lauren-foote-602b71226/",
-  },
-  {
-    id: "harper",
-    name: "Harper Lower",
-    role: ["Head of Writing"],
-    photo: harper,
-    linkedin: "https://www.linkedin.com/in/harperlower/",
-  },
-  {
     id: "drew",
     name: "Drew Malizia",
     role: ["Co-Creative Director", "Editorial & Brand Designer"],
@@ -39,9 +18,30 @@ const team = [
   {
     id: "ingrid",
     name: "Ingrid Burger",
-    role: ["Co-Creative Director", "Editorial & Web Designer"],
+    role: ["Co-Creative Director", "Editorial & UX Designer"],
     photo: ingrid,
     linkedin: "https://www.linkedin.com/in/ingridburger/",
+  },
+    {
+    id: "harper",
+    name: "Harper Lower",
+    role: ["Associate Editor"],
+    photo: harper,
+    linkedin: "https://www.linkedin.com/in/harperlower/",
+  },
+  {
+    id: "lucy",
+    name: "Lucy Tyler",
+    role: ["Production Head"],
+    photo: lucy,
+    linkedin: "https://www.linkedin.com/in/lucinda-tyler/",
+  },
+  {
+    id: "lauren",
+    name: "Lauren Foote",
+    role: ["Managing Editor"],
+    photo: lauren,
+    linkedin: "https://www.linkedin.com/in/lauren-foote-602b71226/",
   },
 ];
 

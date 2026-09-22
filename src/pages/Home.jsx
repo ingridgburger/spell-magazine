@@ -45,6 +45,18 @@ function Home() {
 
     updateHeroViewportHeight();
 
+    const header = document.querySelector(".site-header");
+    const banner = document.querySelector(".announcement-banner");
+    const resizeObserver = new ResizeObserver(updateHeroViewportHeight);
+
+    if (header) {
+      resizeObserver.observe(header);
+    }
+
+    if (banner) {
+      resizeObserver.observe(banner);
+    }
+
     window.addEventListener("resize", updateHeroViewportHeight);
     window.addEventListener("orientationchange", updateHeroViewportHeight);
     window.visualViewport?.addEventListener("resize", updateHeroViewportHeight);
@@ -56,6 +68,7 @@ function Home() {
         "resize",
         updateHeroViewportHeight,
       );
+      resizeObserver.disconnect();
     };
   }, []);
 
