@@ -152,13 +152,11 @@
     align-items: center;
     justify-content: center;
     position: fixed;
-    top: 82px;
+    top: 77px;
+    bottom: 0;
     left: 0;
     right: 0;
     width: 100vw;
-    height: 100vh;
-    height: 100svh;
-    height: 100dvh;
     overflow: hidden;
     background-color: rgba(26, 26, 26, 0.9);
     padding: 24px var(--mobile-side-padding);
