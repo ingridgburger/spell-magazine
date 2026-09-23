@@ -1,9 +1,9 @@
 import fallWinter2026 from "../assets/images/spell-fall-winter-2026.webp";
-import spring2025 from "../assets/images/spell-spring-2025.webp";
-import winter2025 from "../assets/images/spell-winter-2025.webp";
+import springSummer2025 from "../assets/images/spell-spring-2025.webp";
+import fallWinter2025 from "../assets/images/spell-winter-2025.webp";
 import backFallWinter2026 from "../assets/images/back-fall-winter-2026.webp";
-import backSpring2025 from "../assets/images/back-spring-2025.webp";
-import backWinter2025 from "../assets/images/back-winter-2025.webp";
+import backSpringSummer2025 from "../assets/images/back-spring-2025.webp";
+import backFallWinter2025 from "../assets/images/back-winter-2025.webp";
 import zineWorkshop2025 from "../assets/images/zine-workshop.webp";
 import backZineWorkshop2025 from "../assets/images/back-zine-workshop.webp";
 import springSummer2026 from "../assets/images/spell-spring-summer-2026.webp";
@@ -63,21 +63,21 @@ export const editions = [
       "We hosted a hands-on zine-making station during the Writers Room Open House, inviting incoming Drexel students to dive into the world of art, publishing, and DIY creativity through collage, writing, and self-expression. Explore pages from our zine workshop below!",
   },
   {
-    id: "spring-2025",
-    label: "Spring 2025",
-    title: "SPRING 2025 EDITION",
-    image: spring2025,
-    backImage: backSpring2025,
+    id: "spring-summer-2025",
+    label: "Spring/Summer 2025",
+    title: "SPRING/SUMMER 2025 EDITION",
+    image: springSummer2025,
+    backImage: backSpringSummer2025,
     openInNewTabUrl: "https://heyzine.com/flip-book/6b337c5e1a.html",
     embedUrl: "https://heyzine.com/flip-book/6b337c5e1a.html",
     printAvailable: false,
   },
   {
-    id: "winter-2025",
-    label: "Winter 2025",
-    title: "WINTER 2025 EDITION",
-    image: winter2025,
-    backImage: backWinter2025,
+    id: "fall-winter-2025",
+    label: "Fall/Winter 2025",
+    title: "Fall/WINTER 2025 EDITION",
+    image: fallWinter2025,
+    backImage: backFallWinter2025,
     openInNewTabUrl: "https://heyzine.com/flip-book/a7d4cee619.html",
     embedUrl: "https://heyzine.com/flip-book/a7d4cee619.html",
     printAvailable: false,
