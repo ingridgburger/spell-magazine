@@ -78,15 +78,15 @@ function Home() {
         <div className="announcement-track">
           <span className="announcement-text">Welcome to SPELL Magazine</span>
           <span className="announcement-text">
-            Spring/Summer 2026 Out Now
+            Spring Summer 2026 Out Now
           </span>
           <span className="announcement-text">Welcome to SPELL Magazine</span>
           <span className="announcement-text">
-            Spring/Summer 2026 Out Now
+            Spring Summer 2026 Out Now
           </span>
           <span className="announcement-text">Welcome to SPELL Magazine</span>
           <span className="announcement-text">
-            Spring/Summer 2026 Out Now
+            Spring Summer 2026 Out Now
           </span>
         </div>
       </div>
@@ -169,7 +169,7 @@ function Home() {
             What Is <span className="text-header-emphasized">Spell</span>?
           </h2>
           <p className="text-subheader">
-            A student-led Philadelphia-based art magazine.
+            A multi media arts magazine
           </p>
           <p className="text-body about-preview-body">
             We are dedicated to giving young artists a platform to publish their

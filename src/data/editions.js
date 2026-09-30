@@ -16,7 +16,7 @@ export const editions = [
   {
     id: "spring-summer-2026",
     label: "Spring Summer 2026",
-    printLabel: "Spring/Summer 2026",
+    printLabel: "Spring Summer 2026",
     title: "SPRING SUMMER 2026 EDITION",
     image: springSummer2026,
     backImage: backSpringSummer2026,
@@ -40,7 +40,7 @@ export const editions = [
   {
     id: "fall-winter-2026",
     label: "Fall Winter 2026",
-    printLabel: "Fall/Winter 2026",
+    printLabel: "Fall Winter 2026",
     title: "FALL WINTER 2026 EDITION",
     image: fallWinter2026,
     backImage: backFallWinter2026,
@@ -64,8 +64,8 @@ export const editions = [
   },
   {
     id: "spring-summer-2025",
-    label: "Spring/Summer 2025",
-    title: "SPRING/SUMMER 2025 EDITION",
+    label: "Spring Summer 2025",
+    title: "SPRING SUMMER 2025 EDITION",
     image: springSummer2025,
     backImage: backSpringSummer2025,
     openInNewTabUrl: "https://heyzine.com/flip-book/6b337c5e1a.html",
@@ -74,8 +74,8 @@ export const editions = [
   },
   {
     id: "fall-winter-2025",
-    label: "Fall/Winter 2025",
-    title: "Fall/WINTER 2025 EDITION",
+    label: "Fall Winter 2025",
+    title: "Fall WINTER 2025 EDITION",
     image: fallWinter2025,
     backImage: backFallWinter2025,
     openInNewTabUrl: "https://heyzine.com/flip-book/a7d4cee619.html",
