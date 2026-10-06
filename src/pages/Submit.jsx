@@ -18,7 +18,7 @@ function Submit() {
       bodyContent={
         <>
           <p className="text-body split-contact-layout-body">
-            Calling on artists of ALL art mediums! Submissions are now open for our fifth edition of SPELL.
+            Calling on artists of ALL art mediums- photography, fashion, drawing, writing, ANYTHING! Submissions are now open for our Fall Winter 2027 edition.
           </p>
           <p className="text-body split-contact-layout-body">
              All information is included in the submission form, linked below:

@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import heroImage from "../assets/images/e4-cover.webp";
 import teamPhoto from "../assets/images/team-fisheye.png";
-import printImage from "../assets/images/to-print.webp";
+import openImage from "../assets/images/open.webp";
 import SplitContactLayout from "../components/SplitContactLayout";
 import "./Home.css";
 
@@ -184,20 +184,29 @@ function Home() {
       </section>
 
       <SplitContactLayout
-        imageSrc={printImage}
-        imageAlt="SPELL Magazine laptop and print preview"
-        imageLinkTo="/support"
-        enableImageHover
-        imageClassName="home-support-layout-image"
-        title={
-          <>
-            Help Keep Spell{" "}
-            <span className="text-header-emphasized">In Print</span>.
-          </>
-        }
-        buttonLabel="Support Our Magazine"
-        buttonTo="/support"
-      />
+      imageSrc={openImage}
+      imageAlt="Submission period open"
+      imageClassName="submit-page-layout-image image-shadow-dark"
+      title={
+        <>
+          SUBMISSIONS ARE <span className="text-header-emphasized">OPEN</span>
+          .
+        </>
+      }
+      bodyContent={
+        <>
+          <p className="text-body split-contact-layout-body">
+            Calling on artists of ALL art mediums- photography, fashion, drawing, writing, ANYTHING! Submissions are now open for our Fall Winter 2027 edition.
+          </p>
+          <p className="text-body split-contact-layout-body">
+             All information is included in the submission form, linked below:
+          </p>
+        </>
+      }
+      buttonLabel="SUBMIT YOUR ART"
+      buttonHref="https://docs.google.com/forms/d/e/1FAIpQLSfmeOfxLJAZDG_dU55PXj49kr_aETbf6zXpQ67VkSNOxdR4QA/viewform"
+      buttonExternal
+    />
     </div>
   );
 }

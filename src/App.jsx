@@ -14,6 +14,11 @@ function ScrollRevealManager() {
   const location = useLocation();
 
   useEffect(() => {
+    window.history.scrollRestoration = "manual";
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+
     const elements = Array.from(document.querySelectorAll(".reveal-item"));
 
     if (!elements.length) {
