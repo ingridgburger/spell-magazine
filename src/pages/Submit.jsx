@@ -5,30 +5,25 @@ import "./Submit.css";
 function Submit() {
   return (
     <SplitContactLayout
-      imageSrc={closedImage}
-      imageAlt="Submission period closed"
-      imageClassName="submit-page-layout-image"
+  
       title={
         <>
-          SUBMISSIONS ARE <span className="text-header-emphasized">CLOSED</span>
+          SUBMISSIONS ARE <span className="text-header-emphasized">OPEN</span>
           .
         </>
       }
       bodyContent={
         <>
           <p className="text-body split-contact-layout-body">
-            Thank you to everyone who submitted work for our fourth edition!
-            Check back in the fall for our next submission period, and get
-            excited for our Spring/Summer 2026 edition. We can't wait to share
-            it with you!
+            Submissions are now open for our Fall Winter 2027 edition.
           </p>
           <p className="text-body split-contact-layout-body">
-            In the meantime, check out our past editions below:
+             All information is included in the submission form, linked below:
           </p>
         </>
       }
-      buttonLabel="READ NOW"
-      buttonTo="/read"
+      buttonLabel="SUBMIT YOUR ART"
+      buttonTo="https://docs.google.com/forms/d/e/1FAIpQLSfmeOfxLJAZDG_dU55PXj49kr_aETbf6zXpQ67VkSNOxdR4QA/viewform"
     />
   );
 }
