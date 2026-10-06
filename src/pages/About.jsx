@@ -4,6 +4,7 @@ import lauren from "../assets/images/lauren.webp";
 import harper from "../assets/images/harper.webp";
 import drew from "../assets/images/drew.webp";
 import ingrid from "../assets/images/ingrid.webp";
+import ellie from "../assets/images/ellie.webp"
 import linkedinIcon from "../assets/images/linked-in-logo-dark.png";
 import "./About.css";
 
@@ -43,6 +44,13 @@ const team = [
     photo: lauren,
     linkedin: "https://www.linkedin.com/in/lauren-foote-602b71226/",
   },
+  {
+    id: "ellie",
+    name: "Ellie Mandell",
+    role: ["Event Coordinator"],
+    photo: ellie,
+    linkedin: "https://www.linkedin.com/in/ellie-mandell-63a0262b9/",
+  }
 ];
 
 function About() {
