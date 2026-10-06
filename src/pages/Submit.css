@@ -1,3 +1,22 @@
 .submit-page-layout-image {
   max-height: 40vh;
+  transform-origin: top center;
+  animation: submit-sign-swing 5s ease-in-out infinite;
+}
+
+@keyframes submit-sign-swing {
+  0%,
+  100% {
+    transform: rotate(-2deg);
+  }
+
+  50% {
+    transform: rotate(2deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .submit-page-layout-image {
+    animation: none;
+  }
 }

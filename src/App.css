@@ -297,6 +297,10 @@ body {
   overflow: visible;
 }
 
+.image-shadow-dark {
+  filter: drop-shadow(0 10px 18px rgba(26, 26, 26, 0.35));
+}
+
 .image-hover-target,
 .image-hover-link img {
   transition:
